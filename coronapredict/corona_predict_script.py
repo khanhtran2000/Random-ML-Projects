@@ -50,7 +50,7 @@ add_dataset = pd.DataFrame(
                     '4/6/2020', '4/7/2020', '4/8/2020', '4/9/2020', '4/10/2020', '4/11/2020', 
                     '4/12/2020', '4/13/2020'
                 ],
-        'Time': [i for i in range(56,70)],
+        'Time': [i for i in range(61,75)],
         'US cases': '',
         'log_US cases': ''
     }
