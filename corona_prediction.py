@@ -9,16 +9,13 @@ import matplotlib.pyplot as plt
 url = 'https://raw.githubusercontent.com/khanhtran2000/random_projects/master/corona%20us.csv'
 dataset = pd.read_csv(url)
 
-# 
+# Use the log of 'US cases' column
 dataset['log_US cases'] = np.log(dataset['US cases'])
 
 # Setting training and testing sets
 X_train = dataset.Time[31:50].values.reshape(-1,1)
-
 y_train = dataset['log_US cases'][31:50].values.reshape(-1,1)
-
 X_test = dataset.Time[50:].values.reshape(-1,1)
-
 y_test = dataset['log_US cases'][50:].values.reshape(-1,1)
 
 regressor = LinearRegression()
@@ -30,8 +27,11 @@ y_pred = regressor.predict(X_test)
 intercept = -4.313
 slope = 0.286
 
+# Print out metrics
 print('Mean Squared Error:', mean_squared_error(y_test, y_pred))
 print('R-Squared Score:', r2_score(y_test, y_pred))
+
+# Print out intercept and slope
 print('Intercept:', intercept)
 print('Slope:', slope)
 
