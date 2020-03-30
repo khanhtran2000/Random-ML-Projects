@@ -13,19 +13,19 @@ dataset = pd.read_csv(url)
 dataset['log_US cases'] = np.log(dataset['US cases'])
 
 # Setting training and testing sets
-X_train = dataset.Time[31:50].values.reshape(-1,1)
-y_train = dataset['log_US cases'][31:50].values.reshape(-1,1)
-X_test = dataset.Time[50:].values.reshape(-1,1)
-y_test = dataset['log_US cases'][50:].values.reshape(-1,1)
+X_train = dataset.Time[30:52].values.reshape(-1,1)
+y_train = dataset['log_US cases'][30:52].values.reshape(-1,1)
+X_test = dataset.Time[52:].values.reshape(-1,1)
+y_test = dataset['log_US cases'][52:].values.reshape(-1,1)
 
 regressor = LinearRegression()
 regressor.fit(X_train, y_train) #training algorithm
 y_pred = regressor.predict(X_test)
 
-# Run regressor.intercept_ to retrieve the intercept, which is -4.313
-# regressor.coef_ to get the slope, which is 0.286
-intercept = -4.313
-slope = 0.286
+# Run regressor.intercept_ to retrieve the intercept, which is -4.387
+# regressor.coef_ to get the slope, which is 0.288
+intercept = -4.387
+slope = 0.288
 
 # Print out metrics
 print('Mean Squared Error:', mean_squared_error(y_test, y_pred))
