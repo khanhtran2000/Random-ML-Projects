@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 
 # Import the csv file
-url = 'https://raw.githubusercontent.com/khanhtran2000/random_projects/master/corona%20us.csv'
+url = 'https://raw.githubusercontent.com/khanhtran2000/random_projects/master/coronapredict/corona_cases.csv'
 dataset = pd.read_csv(url)
 
 # Use the log of 'US cases' column
