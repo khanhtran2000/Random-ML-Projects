@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
+%matplotlib inline
 
 # Import the csv file
 url = 'https://raw.githubusercontent.com/khanhtran2000/random_projects/master/corona%20us.csv'
