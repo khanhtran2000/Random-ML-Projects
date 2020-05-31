@@ -1,3 +1,4 @@
+## Script Running Heads-up
 - It takes really long to run the script since most of the codes are loops. But it runs eventually. I think it may take around 30 minutes. 
 
 - There is a function in Python that runs k-fold cross-validation faster than loops but it automatically split the file, and in this script I want to keep the professor's way of splitting files so I use loops.
